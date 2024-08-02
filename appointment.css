@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    padding: 20px;
+    flex: 1;
+    margin-left: 5px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#calendar {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+form {
+    margin: 20px 0;
+    max-width: 400px; /* Reduce form width for a more compact look */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: gray;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    width: calc(100% - 16px); /* Account for padding */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #612ab9;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 80px; /* Set a fixed height for textareas */
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Calendar color styles */
+.appointment {
+    background-color: #ff9f89 !important; /* Light red for appointments */
+}
+
+.reminder {
+    background-color: #f1c40f !important; /* Yellow for reminders */
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #111827;
+    color: #9ca3af;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+}
+
+.sidebar-top,
+.sidebar-center,
+.sidebar-bottom {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #4b4b4b;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.sidebar-center {
+    flex-direction: column; 
+    align-items: flex-start;
+}
+
+.sidebar-bottom {
+    justify-content: center;
+    border: none;
+}
+
+.logo {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.brand {
+    font-size: 20px;
+    color: #fff;
+}
+
+.list {
+    list-style: none;
+    width: 100%;
+    padding: 0; 
+    margin: 0; 
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.list-item:hover,
+.list-item.active {
+    background-color: #374151;
+    color: #fff;
+}
+
+.list-item-icon {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.list-item-text {
+    font-size: 14px;
+}
+
+.color-box {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.color-box.dark {
+    background-color: #000;
+}
+
+.color-box.night {
+    background-color: #374151;
+}
+
+.color-box.light {
+    background-color: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa; /* Example background color */
+}
+
+.logout {
+    background-color: #007bff; /* Example button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.logout i {
+    margin-right: 5px; /* Space between icon and text */
+}
+

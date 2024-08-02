@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Input Form</title>
+    <link rel="stylesheet" href="add.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <i class="logo fab fa fa-heartbeat"></i>
+                <span class="brand">Smart e-Health Record System</span>
+            </div>
+            <div class="sidebar-center">
+                <ul class="list">
+                    <li class="list-item" onclick="redirectToPage('profile.html')">
+                        <i class="list-item-icon fas fa-address-card"></i>
+                        <span class="list-item-text">Profile</span>
+                    </li>
+                    <li class="list-item" onclick="redirectToPage('dashboard.html')">
+                        <i class="list-item-icon fas fa-stream"></i>
+                        <span class="list-item-text">Dashboard</span>
+                    </li>
+                    <li class="list-item" onclick="redirectToPage('report.html')">
+                        <i class="list-item-icon fas fa-book"></i>
+                        <span class="list-item-text">Reports</span>
+                    </li>
+                    <li class="list-item" onclick="redirectToPage('appointment.html')">
+                        <i class="list-item-icon fa fa-calendar"></i>
+                        <span class="list-item-text">Appointments</span>
+                    </li>
+                    <li id="add" class="list-item active" onclick="redirectToPage('add.html')">
+                        <i class="list-item-icon fa fa-upload"></i>
+                        <span class="list-item-text">Add Details</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-bottom">
+                <div class="color-box dark"></div>
+                <div class="color-box night"></div>
+                <div class="color-box light"></div>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header>
+                <button id="logoutButton" class="logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </button>
+            </header>
+            <section id="diabetic-prediction">
+                <h2>Diabetic Prediction</h2>
+                <form>
+                    <!-- Input fields for diabetic prediction -->
+                    <label>Feature 1: <input type="text" name="feature1"></label>
+                    <label>Feature 2: <input type="text" name="feature2"></label>
+                    <label>Feature 3: <input type="text" name="feature3"></label>
+                    <label>Feature 4: <input type="text" name="feature4"></label>
+                    <label>Feature 5: <input type="text" name="feature5"></label>
+                    <label>Feature 6: <input type="text" name="feature6"></label>
+                    <label>Feature 7: <input type="text" name="feature7"></label>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+
+            <section id="heart-disease-prediction">
+                <h2>Heart Disease Prediction</h2>
+                <form>
+                    <!-- Input fields for heart disease prediction -->
+                    <label>Feature 1: <input type="text" name="feature1"></label>
+                    <label>Feature 2: <input type="text" name="feature2"></label>
+                    <label>Feature 3: <input type="text" name="feature3"></label>
+                    <label>Feature 4: <input type="text" name="feature4"></label>
+                    <label>Feature 5: <input type="text" name="feature5"></label>
+                    <label>Feature 6: <input type="text" name="feature6"></label>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+
+            <section id="reports">
+                <h2>Reports</h2>
+                <form>
+                    <!-- Input fields for reports -->
+                    <label>Date: <input type="date" name="date"></label>
+                    <label>Report Name: <input type="text" name="report-name"></label>
+                    <label>Report Image: <input type="file" name="report-image"></label>
+                    <label>Handwritten or Printed: 
+                        <select name="handwritten-printed">
+                            <option value="handwritten">Handwritten</option>
+                            <option value="printed">Printed</option>
+                        </select>
+                    </label>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+
+            <section id="surgical-information">
+                <h2>Surgical Information</h2>
+                <form>
+                    <!-- Input fields for surgical information -->
+                    <label>Date: <input type="date" name="date"></label>
+                    <label>Name: <input type="text" name="name"></label>
+                    <label>Acknowledgements: <textarea name="acknowledgements"></textarea></label>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+
+            <section id="vaccination-details">
+                <h2>Vaccination Details</h2>
+                <form>
+                    <!-- Input fields for vaccination details -->
+                    <label>Date: <input type="date" name="date"></label>
+                    <label>Name: <input type="text" name="name"></label>
+                    <label>Acknowledgements: <textarea name="acknowledgements"></textarea></label>
+                    <label>Complete or Pending: 
+                        <select name="status">
+                            <option value="complete">Complete</option>
+                            <option value="pending">Pending</option>
+                        </select>
+                    </label>
+                    <button type="submit">Submit</button>
+                    <button type="button">Add Reminder</button>
+                </form>
+            </section>
+
+            <section id="personal-medical-details">
+                <h2>Personal Medical Details</h2>
+                <form>
+                    <!-- Input fields for personal medical details -->
+                    <label>Details: <textarea name="details"></textarea></label>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+
+            <section id="lifestyle">
+                <h2>Lifestyle</h2>
+                <form>
+                    <!-- Input fields for lifestyle -->
+                    <label>Details: <textarea name="details"></textarea></label>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script src="add.js"></script>
+</body>
+</html>

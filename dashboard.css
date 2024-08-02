@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #111827;
+    color: #9ca3af;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    align-items: left;
+    padding: 5px;
+}
+
+.sidebar-top,
+.sidebar-center,
+.sidebar-bottom {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #4b4b4b;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.sidebar-center {
+    flex-grow: 1; 
+    flex-direction: column; 
+    align-items: flex-start;
+}
+
+.sidebar-bottom {
+    justify-content: center;
+    border: none;
+}
+
+.logo {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.brand {
+    font-size: 20px;
+    color: #fff;
+}
+
+.list {
+    list-style: none;
+    width: 100%;
+    padding: 0; 
+    margin: 0; 
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.list-item:hover,
+.list-item.active {
+    background-color: #374151;
+    color: #fff;
+}
+
+.list-item-icon {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.list-item-text {
+    font-size: 14px;
+}
+
+.color-box {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.color-box.dark {
+    background-color: #000;
+}
+
+.color-box.night {
+    background-color: #374151;
+}
+
+.color-box.light {
+    background-color: #fff;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header input[type="search"] {
+    width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.user-actions button {
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.health-indicators,
+.analytics {
+    width: 48%;
+}
+
+.performance,
+.chart {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.performance h3,
+.analytics h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circular-progress{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: conic-gradient(#7d2ae8 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.circular-progress::before{
+    content: "";
+    position: absolute;
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.progress-value{
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    color: #7d2ae8;
+}
+
+.circular-progress1{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: conic-gradient(#7d2ae8 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.circular-progress1::before{
+    content: "";
+    position: absolute;
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.progress-value1{
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    color: #7d2ae8;
+}
+
+.chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chart canvas {
+    margin: 20px 0;
+}
+
+.performance .score button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.list-item.active {
+    background-color: rgba(240, 240, 240, 0.5); 
+    font-weight: bold;
+    color: #333; 
+}
+
+.logout {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f44336; 
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.logout i {
+    margin-right: 8px; 
+}

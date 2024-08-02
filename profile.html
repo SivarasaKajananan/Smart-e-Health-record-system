@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Medical Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <i class="logo fab fa fa-heartbeat"></i>
+                <span class="brand">Smart e-Health Record System</span>
+            </div>
+            <div class="sidebar-center">
+                <ul class="list">
+                    <li id="profile" class="list-item active" onclick="redirectToPage('profile.html')">
+                        <i class="list-item-icon fas fa-address-card"></i>
+                        <span class="list-item-text">Profile</span>
+                    </li>
+                    <li class="list-item" onclick="redirectToPage('dashboard.html')">
+                        <i class="list-item-icon fas fa-stream"></i>
+                        <span class="list-item-text">Dashboard</span>
+                    </li>
+                    <li class="list-item" onclick="redirectToPage('report.html')">
+                        <i class="list-item-icon fas fa-book"></i>
+                        <span class="list-item-text">Reports</span>
+                    </li>
+                    <li class="list-item" onclick="redirectToPage('appointment.html')">
+                        <i class="list-item-icon fa fa-calendar"></i>
+                        <span class="list-item-text">Appointments</span>
+                    </li>
+                    <li class="list-item" onclick="redirectToPage('add.html')">
+                        <i class="list-item-icon fa fa-upload"></i>
+                        <span class="list-item-text">Add Details</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-bottom">
+                <div class="color-box dark"></div>
+                <div class="color-box night"></div>
+                <div class="color-box light"></div>
+            </div>
+        </aside>
+        <div class="main-content">
+            <header>
+                <h1>Personal Medical Profile</h1>
+                <button id="logoutButton" class="logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </button>
+            </header>
+            <div class="profile">
+                <div class="profile-pic">
+                    <img src="profile.jpeg" alt="Profile Picture">
+                </div>
+            </div>
+            <main>
+                <section id="personal-info">
+                    <h2>Personal Information</h2>
+                    <p><strong>Name:</strong> Jane Smith</p>
+                    <p><strong>Date of Birth:</strong> February 14, 1990</p>
+                    <p><strong>Gender:</strong> Female</p>
+                    <p><strong>Blood Type:</strong> A+</p>
+                    <p><strong>Contact Information:</strong> jane.smith@example.com, (123) 456-7890</p>
+                    <p><strong>Emergency Contact:</strong> John Smith, (987) 654-3210</p>
+                </section>
+                <section id="medical-history">
+                    <h2>Medical History</h2>
+                    <ul>
+                        <li>2019: Diagnosed with asthma</li>
+                        <li>2017: Fractured arm</li>
+                        <li>2014: Allergic reaction to penicillin</li>
+                    </ul>
+                </section>
+                <section id="vital-signs">
+                    <h2>Vital Signs</h2>
+                    <p><strong>Blood Pressure:</strong> 120/80 mmHg</p>
+                    <p><strong>Heart Rate:</strong> 72 bpm</p>
+                    <p><strong>Respiratory Rate:</strong> 16 breaths/min</p>
+                    <p><strong>Body Temperature:</strong> 98.6°F</p>
+                    <p><strong>Oxygen Saturation:</strong> 98%</p>
+                </section>
+                <section id="current-medications">
+                    <h2>Current Medications</h2>
+                    <ul>
+                        <li>Albuterol Inhaler - As needed</li>
+                        <li>Ibuprofen 200mg - As needed</li>
+                        <li>Vitamin D 1000 IU - Once a day</li>
+                    </ul>
+                </section>
+                <section id="immunizations">
+                    <h2>Immunizations</h2>
+                    <ul>
+                        <li>2020: Flu Vaccine</li>
+                        <li>2018: Tetanus Booster</li>
+                        <li>2016: MMR Vaccine</li>
+                    </ul>
+                </section>
+                <section id="appointments-reminders">
+                    <h2>Appointments and Reminders</h2>
+                    <ul>
+                        <li>Next Appointment: July 30, 2024 - General Checkup</li>
+                        <li>Medication Reminder: Take Vitamin D at 8 AM daily</li>
+                    </ul>
+                </section>
+                <section id="chronic-conditions">
+                    <h2>Chronic Conditions</h2>
+                    <ul>
+                        <li>Asthma - Managed with inhaler</li>
+                        <li>Allergic Rhinitis - Managed with antihistamines</li>
+                    </ul>
+                </section>
+                <section id="insurance-info">
+                    <h2>Insurance Information</h2>
+                    <p><strong>Provider:</strong> HealthFirst Insurance</p>
+                    <p><strong>Policy Number:</strong> HF123456789</p>
+                    <p><strong>Coverage Details:</strong> Full coverage for general checkups and emergency visits</p>
+                </section>
+                <section id="physician-contacts">
+                    <h2>Physician Contacts</h2>
+                    <p><strong>Primary Care Physician:</strong> Dr. Emily Clark</p>
+                    <p><strong>Specialist:</strong> Dr. Michael Johnson (Allergist)</p>
+                </section>
+                <section id="lifestyle-metrics">
+                    <h2>Lifestyle Metrics</h2>
+                    <p><strong>Diet:</strong> Balanced diet with emphasis on fruits and vegetables</p>
+                    <p><strong>Exercise:</strong> Jogging 3 times a week</p>
+                    <p><strong>Smoking Status:</strong> Non-smoker</p>
+                    <p><strong>Alcohol Consumption:</strong> Occasionally</p>
+                    <p><strong>Sleep Patterns:</strong> 7-8 hours per night</p>
+                    <p><strong>Stress Levels:</strong> Moderate</p>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script>
+        function redirectToPage(page) {
+            window.location.href = page;
+        }
+
+        // Highlight the active menu item
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const currentPage = window.location.pathname.split('/').pop();
+            const menuItems = document.querySelectorAll('.list-item');
+            
+            menuItems.forEach(item => {
+                item.classList.remove('active'); // Remove the 'active' class from all items
+            });
+
+            if (currentPage === 'profile.html' || currentPage === '') {
+                document.getElementById('profile').classList.add('active');
+            } else {
+                menuItems.forEach(item => {
+                    const iconClass = item.querySelector('.list-item-icon').classList[1];
+                    const pageMap = {
+                        'fa-address-card': 'profile.html',
+                        'fa-stream': 'dashboard.html',
+                        'fa-book': 'report.html',
+                        'fa-calendar': 'appointment.html'
+                    };
+                    if (pageMap[iconClass] === currentPage) {
+                        item.classList.add('active');
+                    }
+                });
+            }
+        });
+    </script>
+    <script src="profile.js"></script>
+</body>
+
+</html>

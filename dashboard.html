@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <i class="logo fab fa fa-heartbeat"></i>
+                <span class="brand">Smart e-Health Record System</span>
+            </div>
+            <div class="sidebar-center">
+                <ul class="list">
+                    <li li class="list-item" onclick="redirectToPage('profile.html')">
+                        <i class="list-item-icon fas fa-address-card"></i>
+                        <span class="list-item-text">Profile</span>
+                    </li>
+                    <li id="dashboard" class="list-item active" onclick="redirectToPage('dashboard.html')">
+                        <i class="list-item-icon fas fa-stream"></i>
+                        <span class="list-item-text">Dashboard</span>
+                    </li>
+                    <li class="list-item" onclick="redirectToPage('report.html')">
+                        <i class="list-item-icon fas fa-book"></i>
+                        <span class="list-item-text">Reports</span>
+                    </li>
+                    <li class="list-item" onclick="redirectToPage('appointment.html')">
+                        <i class="list-item-icon fa fa-calendar"></i>
+                        <span class="list-item-text">Appointments</span>
+                    </li>
+                    <li class="list-item" onclick="redirectToPage('add.html')">
+                        <i class="list-item-icon fa fa-upload"></i>
+                        <span class="list-item-text">Add Details</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-bottom">
+                <div class="color-box dark"></div>
+                <div class="color-box night"></div>
+                <div class="color-box light"></div>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header>
+                <input type="search" placeholder="Search patients, invoice, appointments etc">
+                <div class="user-actions">
+                    <button class="notification">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                    <button class="settings">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                    <button id="logoutButton" class="logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Logout
+                    </button>                    
+                </div>
+            </header>
+            <section class="dashboard">
+                <div class="health-indicators">
+                    <div class="performance">
+                        <h3>Diabetic Indicator</h3>
+                        <div class="score">
+                            <div class="circular-progress">
+                                <span class="progress-value">0%</span>
+                            </div>
+                            <p>Martha Smith is healthier than 95% people</p>
+                            <button>Check Full Report</button>
+                        </div>
+                    </div>
+                    <div class="performance">
+                        <h3>Heart disease Indicator</h3>
+                        <div class="score">
+                            <div class="circular-progress1">
+                                <span class="progress-value1">0%</span>
+                            </div>
+                            <p>Martha Smith's glucose level is better than 85% people</p>
+                            <button>Check Full Report</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="analytics">
+                    <div class="chart">
+                        <p>Heart Rate</p>
+                        <canvas id="heartRateChart"></canvas>
+                        <p>Blood Pressure</p>
+                        <canvas id="bloodPressureChart"></canvas>
+                        <p>Glucose Level</p>
+                        <canvas id="glucoseChart"></canvas>
+                        <p>Daily Calorie Intake</p>
+                        <canvas id="calorieChart"></canvas>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="dashboard.js"></script>
+    
+</body>
+</html>
